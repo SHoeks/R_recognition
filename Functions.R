@@ -151,7 +151,11 @@ divideResults <- function(step3,adjustdivision){
   y6<<-x3
   y7<<-x4
   amounttwo=length(stats3[,2]); amountone=length(stats2[,2])
-  totalamount=amounttwo*2+amountone; 
+  totalamount=amounttwo+amountone; 
   textend="number of objects counted ="; endresult=totalamount
-  as.vector(cbind(textend,endresult))
+  print(as.vector(cbind(textend,endresult)))
+  textend="number of large objects counted ="; endresult=amounttwo
+  print(as.vector(cbind(textend,endresult)))
+  textend="number of small objects counted ="; endresult=amountone
+  print(as.vector(cbind(textend,endresult)))
 }
