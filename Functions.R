@@ -52,7 +52,7 @@ setThreshold <- function(image_to_open,Threshold){
   image1[image1>totalthres+0.1]=1
   image1[image1<1]=0
   y3=writePNG(image1); y4=readPNG(y3); y4[y4>0]=1; y4[y4==0]=2; y4[y4==1]=0; y4[y4==2]=1; 
-  display(image, title="original image"); display(y4, title="image with threhold set"); 
+  # display(image, title="original image"); display(y4, title="image with threhold set"); 
   # Saving to global enviroment
   y3<<-image;
   y4<<-y4; sprintf("$%.2f", y4); ### needed later?
@@ -96,9 +96,9 @@ backgroundObjects <- function(maxsize,minsize){
   for (zw in 1:(zEnd-1))
   {LabelFIN4[LabelFIN4==(stats4[zw,1])] = 0};
   LabelFIN4[LabelFIN4>1]=1; 
-  display(LabelFIN4, title="unwanted backgroud objects"); 
+  # display(LabelFIN4, title="unwanted backgroud objects"); 
   # subtraction of background
-  ff4=Image(LabelFIN4, colormode=Grayscale); y5=y4-LabelFIN4; display(y5, title="objects of interest remaining")
+  ff4=Image(LabelFIN4, colormode=Grayscale); y5=y4-LabelFIN4; # display(y5, title="objects of interest remaining")
   # Saving to global enviroment
   y5<<-y5; sprintf("$%.2f", y5); ### needed later?
   totalthres<<-totalthres; sprintf("$%.2f", totalthres); ### needed later?
@@ -152,6 +152,6 @@ divideResults <- function(step3,adjustdivision){
   y7<<-x4
   amounttwo=length(stats3[,2]); amountone=length(stats2[,2])
   totalamount=amounttwo*2+amountone; 
-  textend="number of birds counted ="; endresult=totalamount
+  textend="number of objects counted ="; endresult=totalamount
   as.vector(cbind(textend,endresult))
 }
