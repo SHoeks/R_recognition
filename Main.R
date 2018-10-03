@@ -19,7 +19,7 @@ source("Functions.R")
 direcPictures=getwd() # set directory images
 listimagesfiles(direcPictures) # list all files in folder choosen
 
-image_to_open=3 # choose image to open from list (state number of image in list)
+image_to_open=4 # choose image to open from list (state number of image in list)
 Threshold= -0.1 # threshold is set automatically but can be altered for better results (higher values -> more objects highlighted)
 setThreshold(image_to_open,Threshold) # setting threshold
 display(y3, title="step 0")
