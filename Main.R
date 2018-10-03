@@ -5,7 +5,7 @@
 #-------------------------------------------------------------------------------------#
 
 # set working dir
-setwd("/Users/Home/Desktop/R")
+setwd("/Users/Home/Desktop/R_recognition-master")
 
 # load/install packages
 # install.packages("pbapply"); install.packages("png"); install.packages("raster"); install.packages("SDMTools")
